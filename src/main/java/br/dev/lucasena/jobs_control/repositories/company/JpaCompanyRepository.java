@@ -8,5 +8,7 @@ import br.dev.lucasena.jobs_control.domain.models.Company;
 
 public interface JpaCompanyRepository extends JpaRepository<Company, UUID> {
   Optional<Company> findByCnpjOrEmail(String cnpj, String email);
+
+  Optional<Company> findByEmail(String email);
 }
 
